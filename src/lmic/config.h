@@ -87,6 +87,12 @@
 #define LMIC_DEBUG_LEVEL 0
 #endif
 
+// LMIC_ENABLE_long_messages
+// LMIC certification requires that this be enabled.
+#if !defined(LMIC_ENABLE_long_messages)
+# define LMIC_ENABLE_long_messages 1        /* PARAM */
+#endif
+
 // Enable this to allow using printf() to print to the given serial port
 // (or any other Print object). This can be easy for debugging. The
 // current implementation only works on AVR, though.
